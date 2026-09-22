@@ -3,6 +3,7 @@
 Guia do GPD/SEEC-RN para as escolas com o laboratório móvel de Chromebooks.
 
 - Página inicial: https://gpd-seec-rn.github.io/guia-sala-conectada/
-- Guia: https://gpd-seec-rn.github.io/guia-sala-conectada/guia-informativo.html
+- Guia: https://gpd-seec-rn.github.io/guia-sala-conectada/guia.html
 
-O endereço antigo `guia-completo.html` continua funcionando e encaminha para o guia.
+Os endereços antigos `guia-informativo.html` e `guia-completo.html` continuam
+funcionando e encaminham para o guia.
