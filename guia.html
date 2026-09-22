@@ -510,6 +510,14 @@ dialog.ampliar p{color:#fff;font-size:15px;margin:10px 0 0;text-align:center}
   </figure>
   <p class="lead">O Sala Conectada é uma iniciativa da SEEC/RN em parceria com o GPD, a Positivo Tecnologia, a MegaEdu e a EVOS.</p>
   <p>O programa leva laboratórios móveis de Chromebooks para as escolas da rede estadual. A ideia é ampliar o uso pedagógico da tecnologia e aproximar os estudantes do ambiente digital.</p>
+  <h3>Falar com o GPD agora</h3>
+  <p>Não precisa ler o guia inteiro para pedir ajuda. Escolha um dos dois caminhos.</p>
+  <ul class="itens">
+    <li><span class="marca"><svg class="icone"><use href="#i-whats"/></svg></span><div><strong>Falar no WhatsApp</strong>Toque em "Abrir WhatsApp". A conversa com o suporte do GPD (4008-4088, opção 4) abre já iniciada: é só escrever. No computador, abre o WhatsApp Web.</div></li>
+    <li><span class="marca"><svg class="icone"><use href="#i-email"/></svg></span><div><strong>Enviar um e-mail</strong>Toque em "Enviar dúvida", o botão que fica sempre à vista: na lateral, no computador, e embaixo, no celular. Preencha os campos e toque em "Abrir no Gmail": o Gmail abre em outra aba com a mensagem pronta para o suporte. Confira e clique em Enviar.</div></li>
+  </ul>
+  <div class="botao-linha"><a class="botao" href="https://wa.me/558440084088" target="_blank" rel="noopener"><svg class="icone"><use href="#i-whats"/></svg>Abrir WhatsApp</a><button class="botao secundario" type="button" data-abrir-duvida><svg class="icone"><use href="#i-email"/></svg>Enviar dúvida</button></div>
+  <div class="faixa dica"><svg class="icone"><use href="#i-lampada"/></svg><div><span class="faixa-titulo">Antes de chamar, tenha em mãos</span><p>O código INEP da escola, o número de série do Chromebook, quando a dúvida for sobre um aparelho, e o seu e-mail institucional, terminado em @educar.rn.gov.br, que o formulário pede para abrir o Gmail na conta certa.</p></div></div>
   <h3>Como este guia está organizado</h3>
   <p>O guia segue o caminho da escola com o laboratório. Toque em uma etapa para ir direto até ela.</p>
   <ol class="linha-tempo largo" style="max-width:860px">
@@ -1346,8 +1354,12 @@ Obrigado(a)!</pre>
     erroDuvida.hidden = true;
     return true;
   }
-  abaDuvida.addEventListener("click", function () {
+  function abrirDuvida() {
     if (typeof dialogoDuvida.showModal === "function") { dialogoDuvida.showModal(); } else { window.location.href = "#contato-gpd"; }
+  }
+  abaDuvida.addEventListener("click", abrirDuvida);
+  Array.prototype.forEach.call(document.querySelectorAll("[data-abrir-duvida]"), function (botao) {
+    botao.addEventListener("click", abrirDuvida);
   });
   dialogoDuvida.querySelector(".duvida-fechar").addEventListener("click", function () { dialogoDuvida.close(); });
   dialogoDuvida.addEventListener("close", function () { abaDuvida.focus(); });
