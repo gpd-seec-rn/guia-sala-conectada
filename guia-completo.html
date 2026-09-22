@@ -137,7 +137,7 @@ figcaption{font-size:15px;color:var(--texto-2);margin-top:10px;line-height:1.5}
 
 /* ---------- Passo a passo ---------- */
 .passos{list-style:none;padding:0;margin:24px 0 28px;counter-reset:passo}
-.passos > li{position:relative;padding:0 0 26px 68px;margin:0;counter-increment:passo;min-height:48px}
+.passos > li{position:relative;padding:0 0 26px 68px;margin:0;counter-increment:passo;min-height:48px;overflow-wrap:break-word}
 .passos > li::before{content:counter(passo);position:absolute;left:0;top:-4px;width:46px;height:46px;border-radius:50%;background:var(--limao);color:var(--verde);font-weight:700;font-size:22px;display:grid;place-items:center;z-index:1}
 .passos > li::after{content:"";position:absolute;left:22px;top:42px;bottom:0;width:2px;background:var(--petroleo)}
 .passos > li:last-child::after{display:none}
